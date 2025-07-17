@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feedback | One Brave Thing</title>
+  <link rel="stylesheet" href="feedback.css" />
+</head>
+<body>
+  <div class="feedback-box">
+    <h2>How do you feel after completing this task?</h2>
+    <div class="emotions">
+      <button class="emotion-btn" data-emoji="😞">😞</button>
+      <button class="emotion-btn" data-emoji="😐">😐</button>
+      <button class="emotion-btn" data-emoji="🙂">🙂</button>
+      <button class="emotion-btn" data-emoji="😊">😊</button>
+      <button class="emotion-btn" data-emoji="🤩">🤩</button>
+    </div>
+    <button class="submit-btn" id="submitBtn">Submit</button>
+  </div>
+  <script>
+let selectedEmotion = null;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const emojiButtons = document.querySelectorAll(".emotion-btn");
+  const submitBtn = document.getElementById("submitBtn");
+
+  emojiButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      emojiButtons.forEach((b) => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      selectedEmotion = btn.getAttribute("data-emoji");
+    });
+  });
+
+  submitBtn.addEventListener("click", () => {
+    if (!selectedEmotion) {
+      alert("Please select an emotion first!");
+      return;
+    }
+    console.log("Selected Emotion:", selectedEmotion);
+    window.location.href = "feedback2.html"; // Change this if your next page has a different name
+  });
+});
+</script>
+
+</body>
+</html>

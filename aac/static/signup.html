@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up | One Brave Thing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <img src="logom.jpg" alt="Logo" class="top-logo" />
+
+  <div class="auth-card">
+    <h1>Sign Up</h1>
+    <form onsubmit="event.preventDefault(); window.location.href='question.html';">
+      <input type="text" placeholder="Name" required />
+      <input type="number" placeholder="Age" required />
+      <input type="text" placeholder="Gender" required />
+      <input type="text" placeholder="Create Username" required />
+      <input type="password" placeholder="Create Password" required />
+      <button type="submit">Sign Up</button>
+      <p class="link-text">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+/* Base styles */
+body.progress-page {
+  margin: 0;
+  font-family: 'Segoe UI', 'Sans Serif Collection', sans-serif;
+  background-image: url("bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Topbar */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #88452D;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-group {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-item img {
+  height: 22px;
+  width: 22px;
+}
+
+
+
+/* Main Layout */
+.main-layout {
+  display: flex;
+  margin-top: 100px;
+  padding: 40px 60px;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+/* Left Chart */
+.left-chart {
+  width: 80px;
+  min-height: 400px;
+  background-color: #854e299d;
+  border-radius: 12px;
+}
+
+/* Center Chart */
+.progress-chart {
+  flex-grow: 1;
+  background-color: #a86135a8;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Right Sidebar */
+.right-sidebar {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Badges */
+.badges {
+  background-color: #ffeedd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.badge-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.badge-row img {
+  height: 45px;
+  width: 45px;
+}
+
+/* Fire and Ice Icon */
+.fire-ice-wrapper {
+  background-color: #fff0e0;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.fire-ice-icon {
+  width: 200px;
+  height: auto;
+}
+
+/* Profile Icon and Sidebar */
+.profile-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 50px;
+}
+
+.profile-icon img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: #8B3E22;
+  padding: 30px 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+
+.sidebar-content img {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+}
+
+.sidebar-content a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar-content a:hover {
+  opacity: 0.8;
+}
+
+.sidebar-content hr {
+  border: none;
+  border-top: 1px solid #ffffff55;
+  margin: 10px 0;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-section img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.profile-section p {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Styled Sign Out Button */
+.sign-out-button {
+  padding: 12px 24px;
+  background-color: #c62828;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.sign-out-button:hover {
+  background-color: #b71c1c;
+}

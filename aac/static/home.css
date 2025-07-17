@@ -1,0 +1,240 @@
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #3b1e16;
+}
+/* Topbar */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #88452D;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-group {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-item img {
+  height: 22px;
+  width: 22px;
+}
+
+/* Profile Icon and Sidebar */
+.profile-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 50px;
+}
+
+.profile-icon img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: #8B3E22;
+  padding: 30px 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+
+.sidebar-content img {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+}
+
+.sidebar-content a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar-content a:hover {
+  opacity: 0.8;
+}
+
+.sidebar-content hr {
+  border: none;
+  border-top: 1px solid #ffffff55;
+  margin: 10px 0;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-section img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.profile-section p {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.welcome-text {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(to bottom, #b5522b, #3d1b0f);
+  color: white;
+  border-radius: 20px;
+  width: 250px;
+  height: 145px;
+  padding: 15px;
+  box-shadow: 3px 3px 5px #a05538;
+  position: relative;
+}
+
+.card .arrow {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  background: #ff7c50;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.card.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-icon {
+  width: 300px;
+  height: 300px;
+}
+
+.courage-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.courage-card {
+  background: linear-gradient(to bottom, #9b4024, #2e1109);
+  color: white;
+  border-radius: 20px;
+  padding: 10px 70px;
+  width: 650px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.courage-img img {
+  width: 350px;
+  height: auto;
+}
+
+.sidebar-content .sign-out-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  background-color: #c62828; /* Red like "Not Able" */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.sidebar-content .sign-out-button:hover {
+  background-color: #b71c1c;
+}

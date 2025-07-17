@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile | One Brave Thing</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="container">
+    <div class="profile-card">
+      <div class="profile-pic">
+        <div id="avatar" class="avatar-placeholder">Profile<br>Picture</div>
+        <input type="file" id="fileInput" accept="image/*" hidden>
+        <button class="upload-btn" onclick="document.getElementById('fileInput').click()">Upload Profile Icon</button>
+      </div>
+      <div class="info-fields">
+        <label>Name</label>
+        <input type="text" placeholder="Enter name" value="Alex Brave">
+
+        <label>Age</label>
+        <input type="number" placeholder="Enter age" value="20">
+
+        <label>Gender</label>
+        <input type="text" placeholder="Enter gender" value="Female">
+
+        <label>Goal</label>
+        <input type="text" placeholder="Enter goal" value="Become more confident">
+
+        <button class="edit-btn">Edit Profile</button>
+      </div>
+    </div>
+  </div>
+      <!-- Sidebar Menu -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <a href="profile.html" class="profile-section" style="text-decoration: none; color: inherit;">
+        <img src="profile-icon.png" alt="Profile" />
+        <p><strong>View Profile</strong></p>
+      </a>
+      <hr />
+      <a href="home.html"><img src="home-icon.png" /> Home</a>
+      <a href="todays-task.html"><img src="task-icon.png" /> Tasks</a>
+      <a href="progress.html"><img src="progress-icon.png" /> Progress Report</a>
+      <a href="streakcal.html"><img src="streak-icon.png" /> Streak</a>
+      <hr />
+      <a ><img src="privacy-icon.png" /> Privacy Policy</a>
+      <a ><img src="terms-icon.png" /> Terms of Use</a>
+      <button class="sign-out-button" onclick="confirmSignOut()">Sign Out</button>
+    </div>
+  </div>
+
+    <!-- Profile Icon (triggers sidebar) -->
+    <div class="profile-icon" onclick="toggleSidebar()">
+      <img src="profile-icon.png" alt="Profile" />
+    </div>
+  </div>
+<!-- Sidebar Toggle Script -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+
+    function confirmSignOut() {
+      const confirmed = confirm("Are you sure you want to sign out?");
+      if (confirmed) {
+        window.location.href = "login.html";
+      }
+    }
+  </script>
+
+  <!-- Link to JS -->
+  <script src="profile.js"></script>
+</body>
+</html>

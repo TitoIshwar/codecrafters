@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Question</title>
+  <link rel="stylesheet" href="question.css" />
+</head>
+<body class="question-page">
+  <div class="question-card">
+    <div class="question-text">{{question_text}}</div>
+
+    <div class="options">
+      <label><input type="radio" name="answer" /> {{option_1}}</label>
+      <label><input type="radio" name="answer" /> {{option_2}}</label>
+      <label><input type="radio" name="answer" /> {{option_3}}</label>
+      <label><input type="radio" name="answer" /> {{option_4}}</label>
+    </div>
+
+    <div class="other-answer">
+      <label><strong>Others:</strong></label>
+      <input type="text" placeholder="Type your answer..." />
+    </div>
+
+    <button class="submit-btn" onclick="window.location.href='mood.html'">Submit</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+

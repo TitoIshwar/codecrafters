@@ -1,0 +1,221 @@
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background: url('bg3.jpg') no-repeat center center fixed;
+background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
+
+.profile-card {
+background-color: rgba(188, 119, 85, 0.43);
+padding: 30px;
+border-radius: 25px;
+box-shadow: 5px 5px 15px rgba(80, 50, 20, 0.2);
+width: 400px;
+height: 650px;
+text-align: center;
+box-sizing: border-box;
+}
+
+.profile-pic {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-bottom: 25px;
+}
+
+.avatar-placeholder {
+width: 110px;
+height: 110px;
+border-radius: 50%;
+border: 3px solid #a56b49;
+background-color: white;
+color: #5c3b2e;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: 0.85rem;
+text-align: center;
+margin-bottom: 10px;
+}
+
+.upload-btn {
+background-color: #a56b49;
+color: white;
+border: none;
+padding: 8px 16px;
+border-radius: 20px;
+cursor: pointer;
+font-size: 0.9rem;
+transition: background 0.3s ease;
+text-align: center;
+display: inline-block;
+}
+
+.upload-btn:hover {
+background-color: #5a311a;
+}
+
+.info-fields {
+text-align: left;
+}
+
+label {
+display: block;
+margin: 12px 0 6px;
+font-weight: bold;
+color: #5c3b2e;
+font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="number"] {
+width: 100%;
+padding: 10px 14px;
+border: 1px solid #d8a887;
+border-radius: 10px;
+outline: none;
+font-size: 1rem;
+background-color: #fffaf7;
+margin-bottom: 10px;
+box-sizing: border-box;
+}
+
+.edit-btn {
+display: block;
+margin: 25px auto 0;
+background: #5a311a;
+border: none;
+color: white;
+padding: 12px 30px;
+font-size: 1rem;
+border-radius: 25px;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+.edit-btn:hover {
+background: linear-gradient(to right, #a56b49, #e0b594);
+}
+
+/* Profile Icon and Sidebar */
+.profile-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-icon img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: #8B3E22;
+  padding: 30px 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+
+.sidebar-content img {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+}
+
+.sidebar-content a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar-content a:hover {
+  opacity: 0.8;
+}
+
+.sidebar-content hr {
+  border: none;
+  border-top: 1px solid #ffffff55;
+  margin: 10px 0;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-section img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.profile-section p {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.sidebar-content .sign-out-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: #c62828; /* Red like "Not Able" */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.sidebar-content .sign-out-button:hover {
+  background-color: #b71c1c;
+}

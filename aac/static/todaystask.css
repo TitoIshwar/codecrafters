@@ -1,0 +1,245 @@
+
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.task-page {
+  background-image: url("bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', 'Sans Serif Collection', sans-serif;
+  padding-top: 70px;
+  min-height: 100vh;
+}
+
+/* Topbar */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #88452D;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-group {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-item img {
+  height: 22px;
+  width: 22px;
+}
+
+/* Profile Icon and Sidebar */
+.profile-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-icon img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: #8B3E22;
+  padding: 30px 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+
+.sidebar-content img {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+}
+
+.sidebar-content a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar-content a:hover {
+  opacity: 0.8;
+}
+
+.sidebar-content hr {
+  border: none;
+  border-top: 1px solid #ffffff55;
+  margin: 10px 0;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-section img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.profile-section p {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+
+/* Task Card */
+.task-card {
+  background: rgba(188, 119, 85, 0.43);
+  backdrop-filter: blur(8px);
+  max-width: 900px;
+  min-height: 400px;
+  padding: 60px;
+  margin: 40px auto;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  color: #3c1a0c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.task-card h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 230px;
+}
+
+.button-group .accept {
+  background-color: #2e7d32;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button-group .accept:hover {
+  background-color: #1b5e20;
+}
+
+.button-group .decline {
+  background-color: #c62828;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button-group .decline:hover {
+  background-color: #b71c1c;
+}
+
+/* Bottom Tagline */
+.bottom-tagline {
+  position: fixed;
+  bottom: 20px;
+  right: 96px;
+  font-size: 48px;
+  color: #1A0D09;
+  font-weight: 300;
+  z-index: 99;
+  margin: 0;
+}
+
+.bottom-tagline strong {
+  font-weight: 700;
+}
+.sidebar-content .sign-out-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: #c62828; /* Red like "Not Able" */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.sidebar-content .sign-out-button:hover {
+  background-color: #b71c1c;
+}

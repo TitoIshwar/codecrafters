@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mood Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="mood-page">
+  <img src="logom.jpg" alt="Logo" class="top-logo" />
+
+  <div class="mood-card">
+    <h2>How are you feeling today?</h2>
+    <div class="emoji-options">
+      <span class="emoji">😢</span>
+      <span class="emoji">☹️</span>
+      <span class="emoji">😐</span>
+      <span class="emoji">🙂</span>
+      <span class="emoji">😁</span>
+    </div>
+    <button onclick="window.location.href='todays-task.html'">Get My Task</button>
+  </div>
+
+  <script>
+    const emojis = document.querySelectorAll('.emoji');
+    emojis.forEach(emoji => {
+      emoji.addEventListener('click', () => {
+        emojis.forEach(e => e.classList.remove('selected'));
+        emoji.classList.add('selected');
+      });
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

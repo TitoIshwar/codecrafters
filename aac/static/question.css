@@ -1,0 +1,72 @@
+body.question-page {
+  margin: 0;
+  padding: 0;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', 'Sans Serif Collection', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.question-card {
+  background: rgba(188, 119, 85, 0.43);
+  padding: 40px;
+  border-radius: 24px;
+  width: 500px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  color: #3c1a0c;
+}
+
+.question-text {
+  background: linear-gradient(to bottom, #e8c0a0, #9b5d35);
+  padding: 15px 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px;
+}
+
+.other-answer {
+  margin: 20px 0;
+}
+
+.other-answer input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #3a08088c;
+  color: white;
+  font-size: 16px;
+}
+
+.submit-btn {
+  background: #a56b49;
+  color: #1a0d09;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to top, #a66040, #6b412a);
+}

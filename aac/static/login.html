@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login | One Brave Thing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <img src="logom.jpg" alt="Logo" class="top-logo" />
+  <div class="auth-card">
+    <h1>Login</h1>
+    <form onsubmit="event.preventDefault(); window.location.href='mood.html';">
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p class="link-text">New here? <a href="signup.html">Sign up</a></p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

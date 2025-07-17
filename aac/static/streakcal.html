@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Streak Calendar | One Brave Thing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calendar-container">
+    <div class="calendar-header">
+      <button onclick="changeMonth(-1)">❮</button>
+      <h2 id="monthYear"></h2>
+      <button onclick="changeMonth(1)">❯</button>
+    </div>
+
+    <div class="calendar-grid" id="calendarGrid">
+      <!-- Days will be dynamically injected here -->
+    </div>
+
+    <div class="legend">
+      <div><span class="legend-box today"></span> Today</div>
+      <div><span class="legend-box completed"></span> Task completed</div>
+      <div><span class="legend-box not-completed"></span> Task not completed</div>
+      <div><span class="legend-box streak"></span> Streak</div>
+    </div>
+  </div>
+
+  
+  <!-- Top Navigation Bar -->
+  <div class="topbar">
+    <div class="nav-left">
+      <img src="logo.jpg" alt="Logo" class="logo" />
+      <div class="nav-group">
+        <a href="todays-task.html" class="nav-item"><img src="task-icon.png" alt="Tasks" />Tasks</a>
+        <a href="progress.html" class="nav-item"><img src="progress-icon.png" alt="Progress" />Progress</a>
+        <a href="streakcal.html" class="nav-item"><img src="streak-icon.png" alt="Streak" />Streak</a>
+      </div>
+    </div>
+      <!-- Sidebar Menu -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <a href="profile.html" class="profile-section" style="text-decoration: none; color: inherit;">
+        <img src="profile-icon.png" alt="Profile" />
+        <p><strong>View Profile</strong></p>
+      </a>
+      <hr />
+      <a href="home.html"><img src="home-icon.png" /> Home</a>
+      <a href="todays-task.html"><img src="task-icon.png" /> Tasks</a>
+      <a href="progress.html"><img src="progress-icon.png" /> Progress Report</a>
+      <a href="streakcal.html"><img src="streak-icon.png" /> Streak</a>
+      <hr />
+      <a ><img src="privacy-icon.png" /> Privacy Policy</a>
+      <a ><img src="terms-icon.png" /> Terms of Use</a>
+      <button class="sign-out-button" onclick="confirmSignOut()">Sign Out</button>
+    </div>
+  </div>
+
+    <!-- Profile Icon (triggers sidebar) -->
+    <div class="profile-icon" onclick="toggleSidebar()">
+      <img src="profile-icon.png" alt="Profile" />
+    </div>
+  </div>
+<!-- Sidebar Toggle Script -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+
+    function confirmSignOut() {
+      const confirmed = confirm("Are you sure you want to sign out?");
+      if (confirmed) {
+        window.location.href = "login.html";
+      }
+    }
+  </script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
