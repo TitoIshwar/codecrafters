@@ -47,8 +47,8 @@ app.include_router(analytics_router, prefix="/api", tags=["Analytics"])
 async def read_root():
     return {"message": "Welcome to the One Brave Thing API!"}
 
-port = int(os.environ.get("PORT", 8000))
 
-# Local run
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    port = int(os.environ.get("PORT", 8000))  # Render sets PORT dynamically
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
+
