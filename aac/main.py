@@ -5,19 +5,19 @@ from fastapi.responses import FileResponse
 from Core_API_Routes import router as core_router
 from analytics_routes import router as analytics_router
 import os
+import uvicorn
 
-# Create the FastAPI app instance
 app = FastAPI(
     title="One Brave Thing API",
     description="API for the personalized life coaching platform.",
     version="1.0.0"
 )
 
-# CORS configuration
+# CORS setup
 origins = [
     "http://localhost",
     "http://localhost:3000",
-    "https://your-frontend.onrender.com"  # ✅ Replace with your actual frontend URL
+    "https://your-frontend.onrender.com"
 ]
 
 app.add_middleware(
@@ -28,25 +28,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount static folder (frontend files like HTML, CSS, JS)
+# Serve static files (HTML, CSS, etc.)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# Serve main HTML file (can be index.html or badges.html)
 @app.get("/", include_in_schema=False)
 async def serve_frontend():
-    return FileResponse("static/badges.html")  # ✅ Make sure this file exists
+    return FileResponse("static/badges.html")  # ✅ Ensure this file exists
 
-# Include API routers
+# API routers
 app.include_router(core_router, prefix="/api", tags=["Core"])
 app.include_router(analytics_router, prefix="/api", tags=["Analytics"])
 
-# Root endpoint
 @app.get("/api", tags=["Root"])
 async def read_root():
     return {"message": "Welcome to the One Brave Thing API!"}
 
-# Main entrypoint for Render (uses dynamic $PORT)
+# Start the server
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
-    import uvicorn
-    uvicorn.run("aac.main:app", host="0.0.0.0", port=port)
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
